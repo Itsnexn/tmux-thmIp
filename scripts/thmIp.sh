@@ -20,7 +20,7 @@ function getIp() {
 }
 function thmCheck(){
     local INTERFACE=$1
-    curl --max-time 2  --proxy localhost:8080 10.10.10.10 | \
+    curl --max-time 2 10.10.10.10 | \
         grep -iq "tryhackme" || return 1
 }
 
